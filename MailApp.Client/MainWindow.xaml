@@ -1,0 +1,27 @@
+﻿<mah:MetroWindow x:Class="MailApp.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:ipack="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:custom="clr-namespace:MailApp.Client.CustomControls"
+                 mc:Ignorable="d"
+        Title="DUMMY MAIL APP" Height="720" Width="1280">
+    <mah:MetroWindow.DataContext>
+        <Binding Path="MainViewModel" Source="{StaticResource ViewModelLocator}"/>
+    </mah:MetroWindow.DataContext>
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <ToggleButton Cursor="Hand" IsChecked="{Binding ElementName=flyout, Path=IsOpen}">
+                <StackPanel Orientation="Horizontal">
+                    <ipack:PackIconMaterial Height="17" Kind="ThemeLightDark" />
+                    <TextBlock Margin="3,0,0,0" VerticalAlignment="Center" FontSize="15" Text="APPEARANCE" />
+                </StackPanel>
+            </ToggleButton>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    <Grid>
+        <custom:ProgressBar Panel.ZIndex="1" Grid.ColumnSpan="2"/>
+        <ContentControl Content="{Binding CurrentViewModel}"/>
+    </Grid>
+</mah:MetroWindow>

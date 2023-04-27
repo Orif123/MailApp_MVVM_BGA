@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="MailApp.Views.Views.MailDashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+             Dialog:DialogParticipation.Register="{Binding}"
+             xmlns:local="clr-namespace:MailApp.Views" xmlns:local1="clr-namespace:MailApp.Client.CustomControls"  xmlns:ipack="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:diag="http://mindfusion.eu/diagramming/wpf" xmlns:viewmodels="clr-namespace:MailApp.ViewModel.ViewModels"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <Binding Path="MailDashboardViewModel" Source="{StaticResource ViewModelLocator}"/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <!--Mail Listing Section -->
+        <Border Style="{DynamicResource SectionBlockStyle}" Margin="7">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Border Background="{DynamicResource MahApps.Brushes.Button.Flat.Background}" Margin="7">
+                    <UniformGrid Rows="1" Columns="2">
+                        <TextBox Text="{Binding Filter, UpdateSourceTrigger=PropertyChanged}"  mah:TextBoxHelper.Watermark="Search..." Margin="0,0,-16,0" />
+                        <ToggleButton  Content="Sort"  IsChecked="{Binding IsSortedAscending}" Margin="16,0,0,0" />
+                    </UniformGrid>
+                </Border>
+                <ListView ItemsSource="{Binding Mails}" Grid.Row="1" SelectedItem="{Binding SelectedMail}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Height="60">
+                                <TextBlock Text="{Binding User.Username}" FontSize="17" Margin="0,0,0,5" />
+                                <TextBlock Text="{Binding Date, StringFormat='{}{0:ddd HH:mm}'}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Border>
+        <!--Mail subject and content sections-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="FontSize" Value="{DynamicResource SubtextFontSize}"/>
+                </Style>
+            </Grid.Resources>
+            <Border Style="{DynamicResource SectionBlockStyle}" Margin="0,7,7,7" >
+                <StackPanel Margin="20">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding SelectedMail.User.ImagePath}" Height="120" Width="200"/>
+                        <StackPanel Margin="10,30">
+                            <TextBlock Text="{Binding SelectedMail.User.Username}" />
+                            <TextBlock >
+                                <Run Text="Email:" />
+                                <Run Text="{Binding SelectedMail.User.Email}"/>
+                            </TextBlock>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="0,15">
+                        <TextBlock >
+                                <Run Text="Subject:" />
+                                <Run Text="{Binding SelectedMail.Subject}"/>
+                        </TextBlock>
+                        <TextBlock >
+                                <Run Text="Received:" />
+                                <Run Text="{Binding SelectedMail.Date, StringFormat='{}{0:dd/MM/yy}'}"/>
+                        </TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+            <Border Grid.Row="1" Style="{DynamicResource SectionBlockStyle}" Margin="0,0,7,7">
+                <TextBlock Text="{Binding SelectedMail.Content}" Margin="15"/>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
