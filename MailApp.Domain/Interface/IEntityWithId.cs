@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MailApp.Models.Interface
+namespace MailApp.Domain.Interface
 {
     public interface IEntityWithId
     {

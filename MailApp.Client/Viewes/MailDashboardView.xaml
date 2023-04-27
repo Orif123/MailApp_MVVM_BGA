@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="MailApp.Views.Views.MailDashboardView"
+﻿<UserControl x:Class="MailApp.Client.Views.MailDashboardView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +6,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
              Dialog:DialogParticipation.Register="{Binding}"
-             xmlns:local="clr-namespace:MailApp.Views" xmlns:local1="clr-namespace:MailApp.Client.CustomControls"  xmlns:ipack="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:diag="http://mindfusion.eu/diagramming/wpf" xmlns:viewmodels="clr-namespace:MailApp.ViewModel.ViewModels"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+             xmlns:local="clr-namespace:MailApp.Client" xmlns:local1="clr-namespace:MailApp.Client.CustomControls"  xmlns:ipack="http://metro.mahapps.com/winfx/xaml/iconpacks" xmlns:diag="http://mindfusion.eu/diagramming/wpf" xmlns:viewmodels="clr-namespace:MailApp.Client.ViewModels"  xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.DataContext>

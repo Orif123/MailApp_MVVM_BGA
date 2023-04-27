@@ -20,8 +20,8 @@
   <ItemGroup>
     <ProjectReference Include="..\MailApp.Client\MailApp.Client.csproj" />
     <ProjectReference Include="..\MailApp.Domain\MailApp.Domain.csproj" />
-    <ProjectReference Include="..\MailApp.Models\MailApp.Domain.csproj" />
-    <ProjectReference Include="..\MailApp.Views\MailApp.Client.csproj" />
+    <ProjectReference Include="..\MailApp.Domain\MailApp.Domain.csproj" />
+    <ProjectReference Include="..\MailApp.Client\MailApp.Client.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Threading;
 using System.Windows;
 
-namespace MailApp.Views.ViewModels
+namespace MailApp.Client.ViewModels
 {
     public class SplashViewModel : ViewModelBase
     {

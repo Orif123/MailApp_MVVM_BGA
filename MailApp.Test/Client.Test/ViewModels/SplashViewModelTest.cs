@@ -1,4 +1,4 @@
-﻿using MailApp.Views.ViewModels;
+﻿using MailApp.Client.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;

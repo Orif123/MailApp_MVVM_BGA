@@ -31,7 +31,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MailApp.Domain\MailApp.Domain.csproj" />
-    <ProjectReference Include="..\MailApp.Models\MailApp.Domain.csproj" />
+    <ProjectReference Include="..\MailApp.Domain\MailApp.Domain.csproj" />
   </ItemGroup>
 
 </Project>

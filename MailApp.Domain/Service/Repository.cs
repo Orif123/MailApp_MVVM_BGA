@@ -1,4 +1,4 @@
-﻿using MailApp.Models.Interface;
+﻿using MailApp.Domain.Interface;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MailApp.Models.Service
+namespace MailApp.Domain.Service
 {
     public class Repository<T> : IRepository<T> where T : class, IEntityWithId
     {

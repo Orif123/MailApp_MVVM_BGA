@@ -1,12 +1,12 @@
 ﻿using GalaSoft.MvvmLight;
-using MailApp.Views.ViewModels;
+using MailApp.Client.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MailApp.ViewModel.ViewModels
+namespace MailApp.Client.ViewModels
 {
     public class MainViewModel : ViewModelBase
     {

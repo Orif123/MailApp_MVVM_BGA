@@ -1,6 +1,6 @@
-﻿using MailApp.Models.Data;
-using MailApp.Models.Models;
-using MailApp.Models.Service;
+﻿using MailApp.Domain.Data;
+using MailApp.Domain.Models;
+using MailApp.Domain.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

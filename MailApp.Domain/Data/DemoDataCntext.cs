@@ -4,9 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MailApp.Models.Models;
+using MailApp.Domain.Models;
 
-namespace MailApp.Models.Data
+namespace MailApp.Domain.Data
 {
     public class DemoDataContext
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace MailApp.Views.Views
+namespace MailApp.Client.Views
 {
     /// <summary>
     /// Interaction logic for BoosterView.xaml

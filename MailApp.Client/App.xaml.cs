@@ -11,7 +11,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Markup;
 
-namespace MailApp.Views
+namespace MailApp.Client
 {
     /// <summary>
     /// Interaction logic for App.xaml

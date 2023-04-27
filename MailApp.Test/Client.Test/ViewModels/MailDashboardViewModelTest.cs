@@ -1,6 +1,6 @@
-﻿using MailApp.Models.Models;
-using MailApp.Models.Service;
-using MailApp.ViewModel.ViewModels;
+﻿using MailApp.Domain.Models;
+using MailApp.Domain.Service;
+using MailApp.Client.ViewModels;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;

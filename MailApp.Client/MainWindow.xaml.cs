@@ -1,6 +1,6 @@
 ﻿using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
-using MailApp.ViewModel.ViewModels;
+using MailApp.Client.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MailApp.Views
+namespace MailApp.Client
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MailApp.Views.Views
+namespace MailApp.Client.Views
 {
     /// <summary>
     /// Interaction logic for HamburgerView.xaml

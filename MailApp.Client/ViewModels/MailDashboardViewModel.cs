@@ -1,6 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
-using MailApp.Models.Models;
-using MailApp.Models.Service;
+using MailApp.Domain.Models;
+using MailApp.Domain.Service;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +11,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Data;
 
-namespace MailApp.ViewModel.ViewModels
+namespace MailApp.Client.ViewModels
 {
     public class MailDashboardViewModel : ViewModelBase
     {
